@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/* Navbar */
+nav {
+    position: fixed;
+    background-color: skyblue;
+    height: 70px;
+    width: 100%; 
+    z-index: 1;
+}
+
+#logo {
+    font-size: 25px;
+    position: relative;
+    Left: 5%;
+    color: white;
+    font-weight: bold;
+    line-height: 70px;
+}
+
+ul{
+    position: relative;
+    float: right;
+    margin-right: 20px;
+}
+
+ul li {
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+/* Hero section */
+#main_img {
+    width: 100%;
+    height: 300px;
+}
+/* Welcome Section */
+.section1 {
+    padding-top: 70px;
+}
+
+#img_text {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    color: white;
+    background-color: midnightblue;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 35px;
+}
+
+#welcome_img {
+    width: 100%;
+    height: 200px;
+    padding-right: 20px;
+}
+/* Teacher/Courses sections */
+.container{
+    padding-top: 70px;
+}
+
+.teacher {
+    width: 90%;
+    height: 150px;
+}
+/* Admissions form */
+.label_text {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.input_deg {
+    width: 30%;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid blue;
+}
+
+.admin_int {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_txt {
+    width: 30%;
+    height: 120px;
+    border-radius: 25px;
+    border: 1px solid blue;
+}
+#adm {
+    padding: 30px 0;
+}
+
+#submit{
+    position: relative;
+    width: 15%;
+    left: 5%;
+    margin-bottom: 20px;
+}
+/* footer */
+footer {
+    background-color: black;
+    height: 70px;
+    width: 100%;
+}
+
+#footer_text{
+    color: white;
+    text-align: center;
+    top: 20%;
+    position: relative;
+}
+/* Login form */
+.form_deg {
+    padding-top: 200px;
+}
+
+.label_deg {
+    display: inline-block;
+    color: skyblue;
+    width: 100px;
+    text-align: right;
+    padding: 10px 0;
+}
+
+.login_form {
+    background-color: black;
+    width: 400px;
+    padding: 70px 0;
+}
+
+.title_deg {
+    background-color: skyblue;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    width: 400px;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+#body_deg {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
