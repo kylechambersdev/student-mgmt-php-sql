@@ -25,7 +25,8 @@ if(isset($_POST['add_student']))
     $user_phone = $_POST['phone'];
     $user_password = $_POST['password'];
     $usertype = "student";
-//check if username already exists
+    /*
+    //check if username already exists
     //select all instances where username in db is the same as the one submitted
     $check = "SELECT * FROM user WHERE username = '$username'";
     //run the query
@@ -37,27 +38,23 @@ if(isset($_POST['add_student']))
         echo "<script type='text/javascript'>
         alert('Username already exists. Please choose a different username.');
         </script>";
+        header('Location: add_student.php');
     }
-    else 
-    {
-        echo "Student successfully added!";
-    }
+*/
+        $sql = "INSERT INTO user (username, email, phone, password, usertype) VALUES ('$username', '$user_email', '$user_phone', '$user_password', '$usertype')";
+        $result = mysqli_query($data, $sql);
 
-
-    $sql = "INSERT INTO user (username, email, phone, password, usertype) VALUES ('$username', '$user_email', '$user_phone', '$user_password', '$usertype')";
-    $result = mysqli_query($data, $sql);
-
-    if($result)
-    {
-        echo "<script type='text/javascript'>
-        alert('Student successfully added!');
-        </script>";
-    }
-    else
-    {
-        echo "Failed to add student";
-    }
-
+        if($result)
+        {
+            echo "<script type='text/javascript'>
+            alert('Student successfully added!');
+            </script>"; 
+            header('Location: view_student.php');
+        }
+        else
+        {
+            echo "Failed to add student";
+        }
 }
 
 ?>

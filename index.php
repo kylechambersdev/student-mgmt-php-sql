@@ -12,6 +12,17 @@ if($_SESSION['message'])
     </script>";
 }
 
+$host = "localhost";
+$user = "root";
+$password = "";
+$db = "schoolproject";
+
+$data = mysqli_connect($host, $user, $password, $db);
+
+$sql = "SELECT * FROM teacher";
+
+$result = mysqli_query($data, $sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -60,18 +71,18 @@ if($_SESSION['message'])
 
     <div class="container">
         <div class="row">
+            <?php 
+            while($info = $result->fetch_assoc())
+            {
+            ?>
             <div class="col-md-4">
-                <img src="images/teacher1.webp" class="teacher" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut fuga perspiciatis eaque harum asperiores eligendi facere quaerat excepturi deserunt sunt?</p>
+                <img src=<?php echo "{$info['image']}" ?> class="teacher" alt="">
+                <h3><?php echo "{$info['name']}" ?></h3>
+                <h5><?php echo "{$info['description']}" ?></h5>
             </div>
-            <div class="col-md-4">
-                <img src="images/teacher2.jpg" class="teacher" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut fuga perspiciatis eaque harum asperiores eligendi facere quaerat excepturi deserunt sunt?</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/teacher3.jpg" class="teacher" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut fuga perspiciatis eaque harum asperiores eligendi facere quaerat excepturi deserunt sunt?</p>
-            </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
 <!-- Our Courses Section -->
